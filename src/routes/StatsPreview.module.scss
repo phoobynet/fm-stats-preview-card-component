@@ -1,51 +1,59 @@
 .stats-preview {
   @apply flex h-screen items-center justify-center;
-}
 
-.card {
-  @apply w-[327px] h-[870px] bg-dark-desaturated-blue text-white overflow-hidden rounded-xl;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  article {
+    @apply grid w-[956px] h-[375px] grid-rows-[480px_auto] overflow-hidden rounded-xl bg-dark-desaturated-blue text-white
 
-  .content-container {
-    @apply grid h-[50vh] border border-red-500;
-    > div {
-      @apply w-[413px] h-[307px] place-self-center;
+    .heading {
+      @apply bg-soft-violet;
+    }
+    .content {
+      @apply mx-[4.5rem] flex flex-col pt-[4.5rem];
+
       h1 {
-        @apply text-4xl font-bold;
+        @apply text-4xl font-semibold leading-[2.7rem];
+      }
 
-        .highlight {
-          @apply text-soft-violet;
+      p {
+        @apply w-[22rem] pt-[1.6rem] font-medium text-white-75 leading-[25px] text-[15px];
+      }
+
+      .stats {
+        @apply w-[21.9rem] pt-[4.5rem];
+
+        img {
+          @apply h-full w-full object-cover object-right-top opacity-75 mix-blend-multiply;
+          content: url("@/assets/image-header-mobile.jpg");
         }
       }
     }
   }
-
-  .heading-image-container {
-    //img {
-    //  @apply object-cover h-full order-1;
-    //  content: url("@/assets/image-header-mobile.jpg");
-    //}
-  }
-
-  .statsList {
-    @apply inline;
-  }
 }
 
-
 @screen desktop {
-  .card {
-    @apply h-[446px] w-[1110px];
-    grid-template-columns: 1fr 1fr;
+  .stats-preview {
+    article {
+      @apply grid w-[1110px] h-[446px] grid-cols-[570px_540px] grid-rows-1;
 
-    .heading-image-container {
-      @apply bg-no-repeat bg-blend-multiply bg-soft-violet w-full h-full;
-      background-image: url("@/assets/image-header-desktop.jpg");
-      //img {
-      //  @apply object-contain h-full w-full bg-blend-multiply bg-soft-violet;
-      //  //content: url("@/assets/image-header-desktop.jpg");
-      //}
+      .content {
+        @apply mx-[4.5rem] flex flex-col pt-[4.5rem];
+
+        h1 {
+          @apply text-4xl font-semibold leading-[2.7rem];
+        }
+
+        p {
+          @apply w-[22rem] pt-[1.6rem] font-medium text-white-75 leading-[25px] text-[15px];
+        }
+
+        .stats {
+          @apply w-[21.9rem] pt-[4.5rem];
+
+          img {
+            content: url("@/assets/image-header-desktop.jpg");
+          }
+        }
+      }
     }
   }
 }
