@@ -1,0 +1,9 @@
+.stats-list-item {
+  .amount {
+    @apply text-2xl font-semibold;
+  }
+
+  .description {
+    @apply text-sm uppercase text-white-60;
+  }
+}
