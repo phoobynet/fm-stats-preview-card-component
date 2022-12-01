@@ -1,9 +1,11 @@
 .stats-list-item {
   .amount {
-    @apply text-2xl font-semibold;
+    @apply text-2xl font-bold;
+    font-family: Inter;
   }
 
   .description {
-    @apply text-sm uppercase text-white-60;
+    @apply text-sm uppercase text-white-60 font-normal text-[12px] -mt-[-.2rem] tracking-[1px];
+    font-family: 'Lexend Deca';
   }
 }

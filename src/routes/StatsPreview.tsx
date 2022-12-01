@@ -7,18 +7,25 @@ export default function StatsPreview() {
     // Page
     <div className="flex h-screen items-center justify-center">
       {/* Container Card */}
-      <div className="grid h-[446px] w-[1110px] grid-cols-[auto_540px] overflow-hidden rounded-xl bg-dark-desaturated-blue text-white">
+      <div className="grid h-[446px] w-[1110px] grid-cols-[570px_540px] overflow-hidden rounded-xl bg-dark-desaturated-blue text-white">
         {/* Left hand content */}
-        <div className="flex flex-col px-[4.5rem]">
-          <h1 className="mt-[4.5rem] mb-6 text-4xl font-semibold leading-[2.7rem]">
+        <div className="mx-[4.5rem] flex flex-col pt-[4.5rem]">
+          <h1 className="text-4xl font-semibold leading-[2.7rem]">
             Get <span className="text-soft-violet">insights</span> that help
             your business grow.
           </h1>
-          <div className="mr-20">
-            <p className="mb-[4.8rem] text-white-75">
-              Discover the benefits of data analytics and make better decisions
-              regarding revenue, customer experience, and overall efficiency.
-            </p>
+          <p
+            className="w-[22rem] pt-[1.6rem] font-medium text-white-75"
+            style={{
+              lineHeight: '25px',
+              fontSize: '15px',
+              fontFamily: 'Inter',
+            }}
+          >
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div className="w-[21.9rem] pt-[4.5rem]">
             <StatsList>
               <StatsListItem
                 amount={'10k+'}
