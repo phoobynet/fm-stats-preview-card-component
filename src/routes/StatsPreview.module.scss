@@ -1,30 +1,40 @@
 .stats-preview {
-  @apply flex h-screen items-center justify-center;
+  @apply flex h-screen justify-center mt-[5.5rem] mb-[10rem];
 
   article {
-    @apply grid w-[956px] h-[375px] grid-rows-[480px_auto] overflow-hidden rounded-xl bg-dark-desaturated-blue text-white
+    @apply grid w-[327px] h-[780px] grid-rows-[240px_auto] overflow-hidden rounded-xl bg-dark-desaturated-blue text-white;
 
     .heading {
       @apply bg-soft-violet;
+      @apply row-start-1 col-start-1;
+      img {
+        @apply h-full object-cover opacity-75 mix-blend-multiply;
+        content: url("@/assets/image-header-mobile.jpg");
+      }
     }
+
     .content {
-      @apply mx-[4.5rem] flex flex-col pt-[4.5rem];
+      @apply flex flex-col row-start-2 col-start-1 mx-7 mt-10;
 
       h1 {
-        @apply text-4xl font-semibold leading-[2.7rem];
+        @apply text-center;
+        font-family: 'Inter';
+        line-height: 32px;
+        font-size: 28px;
+        letter-spacing: 0;
+        font-weight: bold;
       }
 
       p {
-        @apply w-[22rem] pt-[1.6rem] font-medium text-white-75 leading-[25px] text-[15px];
+        @apply text-white-75 text-center mt-6;
+        font-family: 'Inter';
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 0;
       }
 
       .stats {
-        @apply w-[21.9rem] pt-[4.5rem];
-
-        img {
-          @apply h-full w-full object-cover object-right-top opacity-75 mix-blend-multiply;
-          content: url("@/assets/image-header-mobile.jpg");
-        }
+        @apply mt-6;
       }
     }
   }
@@ -32,26 +42,30 @@
 
 @screen desktop {
   .stats-preview {
+    @apply flex h-screen items-center justify-center my-0;
     article {
       @apply grid w-[1110px] h-[446px] grid-cols-[570px_540px] grid-rows-1;
 
+      .heading {
+        @apply row-start-1 col-start-2;
+        img {
+          content: url("@/assets/image-header-desktop.jpg");
+        }
+      }
+
       .content {
-        @apply mx-[4.5rem] flex flex-col pt-[4.5rem];
+        @apply mx-[4.5rem] flex flex-col mt-[4.5rem] row-start-1 col-start-1;
 
         h1 {
-          @apply text-4xl font-semibold leading-[2.7rem];
+          @apply text-4xl font-semibold leading-[2.7rem] text-left;
         }
 
         p {
-          @apply w-[22rem] pt-[1.6rem] font-medium text-white-75 leading-[25px] text-[15px];
+          @apply w-[22rem] mt-[1.6rem] font-medium text-white-75 leading-[25px] text-[15px] text-left;
         }
 
         .stats {
-          @apply w-[21.9rem] pt-[4.5rem];
-
-          img {
-            content: url("@/assets/image-header-desktop.jpg");
-          }
+          @apply w-[21.9rem] mt-[4.5rem];
         }
       }
     }

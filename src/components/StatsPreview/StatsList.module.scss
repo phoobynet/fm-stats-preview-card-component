@@ -1,0 +1,9 @@
+.stats-list {
+  @apply flex flex-col items-center justify-between h-56;
+}
+
+@screen desktop {
+  .stats-list {
+    @apply flex-row items-center h-[56px];
+  }
+}

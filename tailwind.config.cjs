@@ -18,6 +18,8 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Inter', '"Lexend Deca"', 'sans-serif'],
+      inter: ['Inter', 'sans-serif'],
+      lexendDeca: ['"Lexend Deca"', 'sans-serif'],
     },
   },
   plugins: [],
