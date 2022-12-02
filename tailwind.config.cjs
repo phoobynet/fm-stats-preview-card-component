@@ -16,8 +16,25 @@ module.exports = {
       mobile: '375px',
       desktop: '1440px',
     },
+    fontSize: {
+      // Desktop
+      'heading-desktop': [
+        '2.25rem',
+        {
+          lineHeight: '2.25rem',
+          fontWeight: 'bold',
+        },
+      ],
+      //  Mobile
+      'heading-mobile': [
+        '1.75rem',
+        {
+          lineHeight: '2rem',
+          fontWeight: 'bold',
+        },
+      ],
+    },
     fontFamily: {
-      sans: ['Inter', '"Lexend Deca"', 'sans-serif'],
       inter: ['Inter', 'sans-serif'],
       lexendDeca: ['"Lexend Deca"', 'sans-serif'],
     },
